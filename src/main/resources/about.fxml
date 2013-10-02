@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?scenebuilder-background-color 0x404040ff?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #333;&#10;" xmlns:fx="http://javafx.com/fxml"
+    fx:controller="de.kesper.crypto.gui.fx.AboutController" >
+  <children>
+    <Text id="" fill="#baff99" layoutX="182.0" layoutY="76.0" scaleX="8.241000203150154" scaleY="4.821830641213901" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #ffffff;&#10;" text="Crypto" />
+    <Text id="" fill="#baff99" layoutX="283.0" layoutY="132.0" scaleX="4.131001787860833" scaleY="3.0675477251418055" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #ffffff;&#10;" text="v 1.0" />
+    <WebView fx:id="view"  layoutX="53.0" layoutY="152.0" prefHeight="213.0" prefWidth="294.0"/>
+  </children>
+</AnchorPane>

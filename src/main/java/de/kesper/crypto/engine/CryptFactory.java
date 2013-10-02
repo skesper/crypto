@@ -7,6 +7,7 @@ import de.kesper.crypto.gui.CryptoMainFrame;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.crypto.*;
+import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.*;
 import javax.xml.bind.JAXB;
@@ -32,10 +33,13 @@ public class CryptFactory {
 
     public static final String ASYMMETRIC_ALGORITHM = "RSA";
     public static final String SYMMETRIC_ALGORITHM = "AES";
+    //public static final String SYMMETRIC_ALGORITHM_CIPHER = SYMMETRIC_ALGORITHM.concat("/CBC/PKCS5PADDING");
     public static final String DIGEST_ALGORITHM = "SHA-256";
     public static final String MESSAGE_ENCODING = "UTF-8";
     public static final int AES_KEY_LENGTH = 256;
     public static final int MAXIMUM_KEY_LENGTH = 8192;
+    public static final Provider sunJCEProvider = Security.getProvider("SunJCE");
+
     private volatile KeyChain keyChain;
     private volatile Path configDir;
 
@@ -277,8 +281,9 @@ public class CryptFactory {
     }
 
     private Cipher getAesCipher(int mode, Key key) throws Exception {
-        Cipher cipher = Cipher.getInstance(SYMMETRIC_ALGORITHM);
-        cipher.init(mode, key);
+        Cipher cipher = Cipher.getInstance(SYMMETRIC_ALGORITHM, sunJCEProvider);
+
+        cipher.init(mode, key);//, new IvParameterSpec("3216549873165498".getBytes("UTF-8")));
         return cipher;
     }
 

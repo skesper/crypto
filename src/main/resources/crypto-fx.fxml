@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml"
+    fx:controller="de.kesper.crypto.gui.fx.CryptoMainFrameController">
+  <bottom>
+    <TextField fx:id="statusField" editable="false" prefWidth="200.0" style="-fx-text-fill: #ffffff;&#10;-fx-background-color: #3e3e3e;" />
+  </bottom>
+  <center>
+    <TextArea fx:id="mainText" prefWidth="200.0" style="-fx-text-fill: #000;&#10;-fx-background-color: #eee;&#10;-fx-font: 12pt &quot;Courier New&quot;;&#10;" wrapText="true" />
+  </center>
+  <top>
+    <MenuBar fx:id="menuBar">
+      <menus>
+        <Menu mnemonicParsing="false" text="Encrypt / Decrypt">
+          <items>
+            <MenuItem id="encrypt-message" mnemonicParsing="false" text="Encrypt Message" onAction="#encryptMessage"  />
+            <MenuItem mnemonicParsing="false" text="Decrypt Message" onAction="#decryptMessage" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Encrypt Files ..." />
+            <MenuItem mnemonicParsing="false" text="Decrypt Files ..." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Exit" onAction="#exitAction" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Key Management">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Export my public key" />
+            <MenuItem mnemonicParsing="false" text="Import other public key" />
+            <MenuItem mnemonicParsing="false" text="List my key ring" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" onAction="#aboutMessage"/>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>

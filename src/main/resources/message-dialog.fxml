@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="501.0" xmlns:fx="http://javafx.com/fxml"
+        fx:controller="de.kesper.crypto.gui.fx.MessageDialogController">
+  <children>
+    <TextArea layoutX="108.0" layoutY="14.0" prefHeight="180.0" prefWidth="380.0" wrapText="true" />
+    <Button layoutX="412.0" layoutY="201.0" mnemonicParsing="false" prefWidth="75.0" text="Cancel" onAction="#cancelPressed" />
+    <Button layoutX="318.0" layoutY="201.0" mnemonicParsing="false" prefWidth="75.0" text="OK" onAction="#okPressed" />
+    <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+  </children>
+</AnchorPane>
